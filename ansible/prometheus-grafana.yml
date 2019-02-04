@@ -1,0 +1,13 @@
+---
+- hosts: all
+  roles:
+  - cloudalchemy.prometheus
+  - cloudalchemy.grafana
+  vars:
+    prometheus_targets:
+      node:
+      - targets:
+        - localhost:9100
+    grafana_security:
+      admin_user: "admin"
+      admin_password: "admin"
