@@ -1,5 +1,6 @@
 resource "digitalocean_droplet" "prometheus-grafana" {
   image  = "centos-7-x64"
+  private_networking = true
   name   = "prometheus-grafana"
   region = "lon1"
   size   = "s-4vcpu-8gb"
